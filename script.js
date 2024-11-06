@@ -10,7 +10,7 @@ botonEnfoque.addEventListener('click', () => {
 
 botonDescansoCorto.addEventListener('click', () => {
     html.setAttribute('data-contexto', 'descanso-corto');
-    
+
 })
 
 botonDescansoLargo.addEventListener('click', () => {
