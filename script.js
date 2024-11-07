@@ -4,27 +4,23 @@ const botonDescansoCorto = document.querySelector('.app__card-button--corto');
 const botonDescansoLargo = document.querySelector('.app__card-button--largo');
 
 // funcion de cambio de imagen
-const cambiarImagen = (rutaImagen) => { 
+const cambiarContexto = (contexto) => { 
    let imagen = document.querySelector('.app__image');
-   imagen.setAttribute('src',rutaImagen);
+      imagen.setAttribute('src',`./imagenes/${contexto}.png`);
+      html.setAttribute('data-contexto',contexto);
 
 }
 
 
 botonEnfoque.addEventListener('click', () => {
-    html.setAttribute('data-contexto', 'enfoque');
-    cambiarImagen('./imagenes/enfoque.png')
-
+   cambiarContexto('enfoque');
 })
 
 botonDescansoCorto.addEventListener('click', () => {
-    html.setAttribute('data-contexto', 'descanso-corto');
-    cambiarImagen('./imagenes/descanso-corto.png')
+    cambiarContexto('descanso-corto');
 
 })
 
 botonDescansoLargo.addEventListener('click', () => {
-    html.setAttribute('data-contexto', 'descanso-largo');
-    cambiarImagen('./imagenes/descanso-largo.png')
+   cambiarContexto('descanso-largo');
 })
-
